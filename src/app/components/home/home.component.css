@@ -1,0 +1,24 @@
+/* Add these styles to center the elements */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.welcome-text {
+  margin-bottom: 20px;
+  text-align: center; /* Center the text */
+}
+
+.welcome-text p {
+  font-weight: bold;
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #333; /* Optional: Change the text color */
+}
+
+/* Optional: Adjust button styles for a more colorful appearance */
+button {
+  margin: 8px;
+}

@@ -1,0 +1,83 @@
+/* register.component.scss */
+
+.container {
+    max-width: 100%;
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form horizontally */
+    justify-content: center; /* Center the form vertically */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Add some spacing below the heading */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure the form takes full width */
+}
+
+mat-form-field.form-group {
+    margin-bottom: 20px;
+
+    label {
+        font-weight: bold;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        transition: border-color 0.15s ease-in-out;
+        box-sizing: border-box;
+    }
+
+    input:focus {
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .mat-error {
+        color: #dc3545;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.mat-raised-button.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.mat-raised-button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.mat-raised-button.btn-primary:disabled,
+.mat-raised-button.btn-primary[disabled] {
+    background-color: #b3d7ff;
+    color: #808080;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 600px) {
+    .container {
+        width: 30%; /* Adjust as needed */
+    }
+}

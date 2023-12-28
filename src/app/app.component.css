@@ -1,0 +1,13 @@
+/* Add these styles to center the buttons */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed to center vertically on the page */
+  }
+  
+  /* Optional: Adjust button styles for a more colorful appearance */
+  button {
+    margin: 8px; /* Add spacing between buttons */
+  }
+  

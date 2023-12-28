@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RMDashboardComponent } from './components/rmdashboard/rmdashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     RMDashboardComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    AdmindashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -3,10 +3,10 @@ import { JwtService } from 'src/app/service/jwt.service';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  templateUrl: './rmdashboard.component.html',
+  styleUrls: ['./rmdashboard.component.css']
 })
-export class DashboardComponent {
+export class RMDashboardComponent {
 
 
   message: string;

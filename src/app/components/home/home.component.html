@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header>
 
 <div class="container">
   <mat-toolbar color="primary">
@@ -10,10 +10,33 @@
       <p>Welcome To Customer Session Portal</p>
     </div>
     <div class="button-container">
-      <button mat-raised-button color="primary" routerLink="/register">Register</button>
       <button mat-raised-button color="accent" routerLink="/login">Login</button>
     </div>
   </div>
 </div>
 
+<router-outlet></router-outlet> -->
+
+
+<app-header></app-header>
+
+<div class="background-container">
+  <div class="container">
+    <mat-toolbar color="primary">
+      <span class="navbar-brand">Angular App</span>
+    </mat-toolbar>
+
+    <div class="center-container">
+      <div class="welcome-text">
+        <p>Welcome To Customer Session Portal</p>
+      </div>
+      <div class="button-container">
+        <!-- <button mat-raised-button color="primary" routerLink="/register">Register</button> -->
+        <button mat-raised-button color="accent" routerLink="/login">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
+

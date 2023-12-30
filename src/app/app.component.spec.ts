@@ -1,29 +1,31 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-
+ 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
-
+  let fixture: ComponentFixture<AppComponent>;
+  let component: AppComponent;
+ 
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [AppComponent],
+    });
+ 
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+  });
+ 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
-
-  it(`should have as title 'jwt-angular'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('jwt-angular');
+ 
+  it('should have a valid title', () => {
+    expect(component.title).toBeTruthy();
+    expect(typeof component.title).toBe('string');
+    expect(component.title.length).toBeGreaterThan(10);
   });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('jwt-angular app is running!');
+ 
+  it('should have the correct title', () => {
+    expect(component.title).toEqual('CustomerSessionPortal');
   });
+ 
 });

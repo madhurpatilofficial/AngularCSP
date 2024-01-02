@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,6 +16,8 @@ import { RMDashboardComponent } from './components/rmdashboard/rmdashboard.compo
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { LoadingInterceptor } from 'src/loading.interceptor';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { AdmindashboardComponent } from './components/admindashboard/admindashbo
     RMDashboardComponent,
     HeaderComponent,
     HomeComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,9 @@ import { AdmindashboardComponent } from './components/admindashboard/admindashbo
     MatFormFieldModule,
     MatInputModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
